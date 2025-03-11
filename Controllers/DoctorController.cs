@@ -32,7 +32,7 @@ namespace Vezeeta.Controllers
 
 
         [HttpGet("search")]
-        public async Task<IActionResult> GetDoctorsBySearch(
+        public async Task<IActionResult> FindDoctorBySearchResult(
              [FromQuery] string? speciality = null,
              [FromQuery] string? governorate = null,
              [FromQuery] string? city = null)
@@ -68,8 +68,8 @@ namespace Vezeeta.Controllers
             return Ok(doctor);
         }
 
-        [HttpGet("/name={name:alpha}")]
-        public async Task<IActionResult> SearchDoctorByName(string name)
+        [HttpGet]
+        public async Task<IActionResult> SearchDoctorByName([FromQuery] string name)
         {
             var doctors = await db.FindDoctorByNameAsync(name);
 

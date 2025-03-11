@@ -157,7 +157,7 @@ namespace testV.Models
             return _;
         }
 
-        public virtual async Task<List<GetDoctorBySearchResult>> GetDoctorBySearchAsync(string speciality, string governorate, string city, OutputParameter<int> returnValue = null, CancellationToken cancellationToken = default)
+        public virtual async Task<List<FindDoctorBySearchResult>> FindDoctorBySearchResults(string speciality, string governorate, string city, OutputParameter<int> returnValue = null, CancellationToken cancellationToken = default)
         {
             var parameterreturnValue = new SqlParameter
             {
@@ -191,53 +191,13 @@ namespace testV.Models
                 },
                 parameterreturnValue,
             };
-            var _ = await _context.SqlQueryAsync<GetDoctorBySearchResult>("EXEC @returnValue = [dbo].[GetDoctorBySearch] @Speciality = @Speciality, @Governorate = @Governorate, @City = @City", sqlParameters, cancellationToken);
+            var _ = await _context.SqlQueryAsync<FindDoctorBySearchResult>("EXEC @returnValue = [dbo].[GetDoctorBySearch] @Speciality = @Speciality, @Governorate = @Governorate, @City = @City", sqlParameters, cancellationToken);
 
             returnValue?.SetValue(parameterreturnValue.Value);
 
             return _;
         }
 
-        public virtual async Task<List<GetDoctorBySpecialityAndLocationResult>> GetDoctorBySpecialityAndLocationAsync(string speciality, string governorate, string city, OutputParameter<int> returnValue = null, CancellationToken cancellationToken = default)
-        {
-            var parameterreturnValue = new SqlParameter
-            {
-                ParameterName = "returnValue",
-                Direction = System.Data.ParameterDirection.Output,
-                SqlDbType = System.Data.SqlDbType.Int,
-            };
-
-            var sqlParameters = new []
-            {
-                new SqlParameter
-                {
-                    ParameterName = "Speciality",
-                    Size = 200,
-                    Value = speciality ?? Convert.DBNull,
-                    SqlDbType = System.Data.SqlDbType.NVarChar,
-                },
-                new SqlParameter
-                {
-                    ParameterName = "Governorate",
-                    Size = 200,
-                    Value = governorate ?? Convert.DBNull,
-                    SqlDbType = System.Data.SqlDbType.NVarChar,
-                },
-                new SqlParameter
-                {
-                    ParameterName = "City",
-                    Size = 200,
-                    Value = city ?? Convert.DBNull,
-                    SqlDbType = System.Data.SqlDbType.NVarChar,
-                },
-                parameterreturnValue,
-            };
-            var _ = await _context.SqlQueryAsync<GetDoctorBySpecialityAndLocationResult>("EXEC @returnValue = [dbo].[GetDoctorBySpecialityAndLocation] @Speciality = @Speciality, @Governorate = @Governorate, @City = @City", sqlParameters, cancellationToken);
-
-            returnValue?.SetValue(parameterreturnValue.Value);
-
-            return _;
-        }
 
         public virtual async Task<List<GetOfferByIdResult>> GetOfferByIdAsync(int? offerId, OutputParameter<int> returnValue = null, CancellationToken cancellationToken = default)
         {

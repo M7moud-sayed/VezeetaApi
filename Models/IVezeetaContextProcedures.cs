@@ -17,8 +17,6 @@ namespace testV.Models
         Task<List<FindDoctorByNameResult>> FindDoctorByNameAsync(string doctorName, OutputParameter<int> returnValue = null, CancellationToken cancellationToken = default);
         Task<List<FindDoctorBySearchResult>> FindDoctorBySearchAsync(string speciality, string governorate, string city, OutputParameter<int> returnValue = null, CancellationToken cancellationToken = default);
         Task<List<GetAllOffersResult>> GetAllOffersAsync(OutputParameter<int> returnValue = null, CancellationToken cancellationToken = default);
-        Task<List<GetDoctorBySearchResult>> GetDoctorBySearchAsync(string speciality, string governorate, string city, OutputParameter<int> returnValue = null, CancellationToken cancellationToken = default);
-        Task<List<GetDoctorBySpecialityAndLocationResult>> GetDoctorBySpecialityAndLocationAsync(string speciality, string governorate, string city, OutputParameter<int> returnValue = null, CancellationToken cancellationToken = default);
         Task<List<GetOfferByIdResult>> GetOfferByIdAsync(int? offerId, OutputParameter<int> returnValue = null, CancellationToken cancellationToken = default);
     }
 }

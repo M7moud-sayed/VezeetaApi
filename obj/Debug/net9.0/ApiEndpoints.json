@@ -1,6 +1,22 @@
 [
   {
     "ContainingType": "Vezeeta.Controllers.DoctorController",
+    "Method": "SearchDoctorByName",
+    "RelativePath": "api/Doctor",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "name",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Vezeeta.Controllers.DoctorController",
     "Method": "FindDoctorByID",
     "RelativePath": "api/Doctor/{id}",
     "HttpMethod": "GET",
@@ -27,7 +43,7 @@
   },
   {
     "ContainingType": "Vezeeta.Controllers.DoctorController",
-    "Method": "GetDoctorsBySearch",
+    "Method": "FindDoctorBySearchResult",
     "RelativePath": "api/Doctor/search",
     "HttpMethod": "GET",
     "IsController": true,
@@ -72,22 +88,6 @@
       {
         "Name": "id",
         "Type": "System.Int32",
-        "IsRequired": true
-      }
-    ],
-    "ReturnTypes": []
-  },
-  {
-    "ContainingType": "Vezeeta.Controllers.DoctorController",
-    "Method": "SearchDoctorByName",
-    "RelativePath": "name={name}",
-    "HttpMethod": "GET",
-    "IsController": true,
-    "Order": 0,
-    "Parameters": [
-      {
-        "Name": "name",
-        "Type": "System.String",
         "IsRequired": true
       }
     ],

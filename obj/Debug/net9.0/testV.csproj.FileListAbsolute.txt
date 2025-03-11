@@ -73,3 +73,13 @@ E:\itp 4 months\Project\testV\testV\obj\Debug\net9.0\refint\testV.dll
 E:\itp 4 months\Project\testV\testV\obj\Debug\net9.0\testV.pdb
 E:\itp 4 months\Project\testV\testV\obj\Debug\net9.0\testV.genruntimeconfig.cache
 E:\itp 4 months\Project\testV\testV\obj\Debug\net9.0\ref\testV.dll
+E:\itp 4 months\Project\testV\testV\obj\Debug\net9.0\testV.sourcelink.json
+E:\itp 4 months\Project\testV\testV\bin\Debug\net9.0\Microsoft.Extensions.Caching.Abstractions.dll
+E:\itp 4 months\Project\testV\testV\bin\Debug\net9.0\Microsoft.Extensions.Caching.Memory.dll
+E:\itp 4 months\Project\testV\testV\bin\Debug\net9.0\Microsoft.Extensions.Configuration.Abstractions.dll
+E:\itp 4 months\Project\testV\testV\bin\Debug\net9.0\Microsoft.Extensions.DependencyInjection.dll
+E:\itp 4 months\Project\testV\testV\bin\Debug\net9.0\Microsoft.Extensions.DependencyInjection.Abstractions.dll
+E:\itp 4 months\Project\testV\testV\bin\Debug\net9.0\Microsoft.Extensions.Logging.dll
+E:\itp 4 months\Project\testV\testV\bin\Debug\net9.0\Microsoft.Extensions.Logging.Abstractions.dll
+E:\itp 4 months\Project\testV\testV\bin\Debug\net9.0\Microsoft.Extensions.Options.dll
+E:\itp 4 months\Project\testV\testV\bin\Debug\net9.0\Microsoft.Extensions.Primitives.dll
